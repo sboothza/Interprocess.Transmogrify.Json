@@ -1,7 +1,7 @@
 
 namespace Interprocess.Transmogrify.Json.Tests.DAL;
 
-public class MarketListRoot
+public class MarketList
 {
     public string _id { get; set; }
 
