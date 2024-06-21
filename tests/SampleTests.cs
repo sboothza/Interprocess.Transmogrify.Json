@@ -13,13 +13,13 @@ namespace Interprocess.Transmogrify.Json.Tests
 			var json = File.ReadAllText("dp2.json");
 
 			var options = new JsonSerializerOptions { DontSerializeNulls = true, IgnorePropertyAttributes = true, Naming = NamingOptions.PropertyName };
-			var obj = JsonSerializer.Deserialize<MarketListRoot>(json, options);
+			var obj = JsonSerializer.Deserialize<MarketList>(json, options);
 			Assert.That(obj, Is.Not.Null);
 
 			options = new JsonSerializerOptions { DontSerializeNulls=true, Naming = NamingOptions.SnakeCase };
 			var newJson = JsonSerializer.Serialize(obj, options);
 
-			var newObj = JsonSerializer.Deserialize<MarketListRoot>(newJson, options);
+			var newObj = JsonSerializer.Deserialize<MarketList>(newJson, options);
 			Assert.That(newObj, Is.Not.Null);
 		}
 	}

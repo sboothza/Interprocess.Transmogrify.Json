@@ -1,6 +1,6 @@
 namespace Interprocess.Transmogrify.Json.Tests.DAL;
 
-public class MarketMatch
+public class Match
 {
 	public string? Away { get; set; }
 	public string? Caption { get; set; }
