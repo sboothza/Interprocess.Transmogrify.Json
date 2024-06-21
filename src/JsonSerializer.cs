@@ -176,6 +176,9 @@ namespace Interprocess.Transmogrify.Json
                         if (prop.prop.CanWrite)
                         {
                             var name = prop.name;
+                            if (options.IgnorePropertyAttributes)
+                                name = prop.prop.Name;
+
                             JsonObject? jsonValue = null;
                             if (options.RemapFields.TryGetValue(name, out string? mappedName))
                                 name = mappedName;

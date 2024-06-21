@@ -17,4 +17,13 @@
       <PackageReference Include="NUnitTestAdapter" Version="2.3.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="dp.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="dp2.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
